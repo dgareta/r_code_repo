@@ -2,21 +2,31 @@
 title: "GitHub"
 author: "Dickman Pangaume Gareta"
 date: "`r Sys.Date()`"
-output: html_document
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# My first version controlled file
+
+This report documents my first attempts of using Git and GitHub to version control an RStudio project. I will be modifying this report , staging and committing changes and the  pushing to GitHub.
+
+Let's create a test plot
+
+
 
 ```{r}
-pacman::p_load(tidyverse)
+pacman::p_load(tidyverse, knitr)
 
 ```
 
 
-```{r cars}
+```{r, test_plot}
+
+plot(cars, col = "red", xlab = "speed(mph)", ylab = "distance(miles)"
+     )
 summary(cars)
 glimpse(cars)
 head(cars)
@@ -24,7 +34,8 @@ head(cars)
 
 ## Including Plots
 
-You can also embed plots, for example:
+Here we plot a scatter plot of temperature and pressure
+
 
 ```{r pressure, echo=FALSE}
 plot(pressure)
@@ -34,4 +45,11 @@ pressure |>
     mapping = aes(x = temperature, y = pressure)) +
 geom_point()
 ```
+A summary of the dtaframe is given below
+
+```{r}
+kable(summary(cars))
+
+```
+
 
