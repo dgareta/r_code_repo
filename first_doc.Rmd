@@ -10,8 +10,15 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
+```{r}
+pacman::p_load(tidyverse)
+
+```
+
+
 ```{r cars}
 summary(cars)
+glimpse(cars)
 ```
 
 ## Including Plots
